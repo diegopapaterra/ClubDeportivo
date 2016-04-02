@@ -1,0 +1,9 @@
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe.config
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.csprojResolveAssemblyReference.cache
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.pdb
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.exe
+D:\196361\03-30-16\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.pdb
+C:\Users\Diego\Desktop\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe.config
+C:\Users\Diego\Desktop\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.exe
+C:\Users\Diego\Desktop\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.pdb
