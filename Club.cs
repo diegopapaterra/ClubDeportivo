@@ -25,6 +25,22 @@ namespace ClubDeportivo
             return resultado;
         }
 
+        /*Metodo Alta Familiar*/
+        public bool altaFamiliar(int nroSocio, string nombre, string apellido, int cantIntegrantes)
+        {
+            bool resultado = false;
+            Socio s = buscarSocio(nroSocio);
+            if (s == null)
+            {
+
+                Familiar p = new Familiar(nroSocio, nombre, apellido, cantIntegrantes);
+                int posicion = buscarPosicion();
+                socios[posicion] = p;
+                resultado = true;
+            }
+            return resultado;
+        }
+
         /*Buscar Posicion del Array para saber donde guardo*/
         public int buscarPosicion() {
             int posicion = 0;
