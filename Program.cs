@@ -14,7 +14,7 @@ namespace ClubDeportivo
             int currentOption = 0;
             do
             {
-                Console.WriteLine("---Menu---");
+                Console.WriteLine("----*Menu*----");
                 Console.WriteLine("1- Alta Socio Particular");
                 Console.WriteLine("2- Alta Socio Familiar");
                 Console.WriteLine("3- Alta Cancha");
