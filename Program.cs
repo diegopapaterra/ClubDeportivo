@@ -68,6 +68,20 @@ namespace ClubDeportivo
                     case 3:
                         Console.Clear();
                         Console.WriteLine("3- Alta Cancha");
+                        Console.WriteLine("Ingrese Codigo de cancha");
+                        int codigoCancha = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese Descripcion");
+                        string description = Console.ReadLine();
+                        Console.WriteLine("Ingrese Ubicacion");
+                        string ubicacion = Console.ReadLine();
+                        /*Instanciar*/
+                        if (c.altaCancha(codigoCancha, description, ubicacion))
+                        {
+                            Console.WriteLine("La Cancha " + codigoCancha + " fue ingresada correctamente");
+                        }
+                        else {
+                            Console.WriteLine("La Cancha " + codigoCancha + " ya existe");
+                        }
                         break;
                     case 4:
                         Console.Clear();
@@ -78,7 +92,7 @@ namespace ClubDeportivo
                     case 5:
                         Console.Clear();
                         Console.WriteLine("4- Listado de Canchas");
-                        
+                        Console.WriteLine(c.listarCanchas());
                         Console.ReadKey();
                         break;
                 }

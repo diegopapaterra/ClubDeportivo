@@ -33,15 +33,63 @@ namespace ClubDeportivo
             if (s == null)
             {
 
-                Familiar p = new Familiar(nroSocio, nombre, apellido, cantIntegrantes);
+                Familiar f = new Familiar(nroSocio, nombre, apellido, cantIntegrantes);
                 int posicion = buscarPosicion();
-                socios[posicion] = p;
+                socios[posicion] = f;
                 resultado = true;
             }
             return resultado;
         }
 
-        /*Buscar Posicion del Array para saber donde guardo*/
+        /*Metodo Alta Cancha*/
+        public bool altaCancha(int codigo, string description, string ubicacion) {
+            bool resultado = false;
+            Cancha c = buscarCancha(codigo);
+            if (c == null)
+            {
+
+                Cancha p = new Cancha(codigo, description, ubicacion);
+                int posicion = buscarPosicion();
+                canchas[posicion] = p;
+                resultado = true;
+            }
+            return resultado;
+        }
+
+
+        /*Buscar Cancha*/
+        /*Buscar Posicion del Array para saber donde guardo en Canchas*/
+        public int buscarPosicionCancha()
+        {
+            int posicion = 0;
+            while (posicion < canchas.Length && canchas[posicion] != null)
+            {
+                posicion++;
+            }
+            return posicion;
+        }
+
+        public Cancha buscarCancha(int codigo)
+        {
+            Cancha c = null;
+            int i = 0;
+            while (i < canchas.Length && c == null)
+            {
+                if (canchas[i] != null)
+                {
+                    if (canchas[i].Codigo == codigo)
+                    {
+                        c = canchas[i];
+                    }
+                }
+                i++;
+            }
+            return c;
+        }
+
+        /*Termino aca Canchas*/
+
+        /*Buscar Posicion del Array para saber donde guardo Socios*/
         public int buscarPosicion() {
             int posicion = 0;
             while (posicion < socios.Length && socios[posicion] != null) {
@@ -72,6 +120,20 @@ namespace ClubDeportivo
                 }
             }
             return socio;
+        }
+
+        /*Listar Canchas*/
+        public string listarCanchas()
+        {
+            string cancha = "";
+            for (int i = 0; i < canchas.Length; i++)
+            {
+                if (canchas[i] != null)
+                {
+                    cancha += canchas[i].ToString();
+                }
+            }
+            return cancha;
         }
     }
 }
