@@ -159,5 +159,21 @@ namespace ClubDeportivo
             }
             return reservas;            
         }
+        /*Reservas por Cancha*/
+        public string reservasPorCancha(int codigoCancha)
+        {
+            string reservas = "";
+            Cancha c = buscarCancha(codigoCancha);
+            int i = 0;
+
+            if (c != null)
+            {
+                while (i < socios.Length && socios[i] != null) {
+                    reservas += socios[i].tieneCancha(c);
+                    i++;
+                }
+            }
+            return reservas;
+        }
     }
 }

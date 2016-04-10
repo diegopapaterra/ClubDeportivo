@@ -52,5 +52,19 @@ namespace ClubDeportivo
             }
             return reservasSocio;
         }
+
+        /*Metodo que retorna un string con las reservas de una cancha*/
+        public string tieneCancha(Cancha c) {
+            string reservasSocio = "";
+            int i = 0;
+            while (i < reservas.Length && reservas[i] != null) {
+                if (reservas[i].Cancha == c) {
+                    reservasSocio += reservas[i];
+                }
+                i++;
+            }
+
+            return reservasSocio;
+        }
     }
 }

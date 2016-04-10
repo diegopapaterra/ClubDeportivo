@@ -22,6 +22,7 @@ namespace ClubDeportivo
                 Console.WriteLine("5- Listar Canchas");
                 Console.WriteLine("6- Alta Reserva");
                 Console.WriteLine("7- Reservas de un Socio");
+                Console.WriteLine("8- Reservas de una Cancha");
                 Console.WriteLine("0- Salir");
                 
                 currentOption = Convert.ToInt32(Console.ReadLine());
@@ -118,6 +119,15 @@ namespace ClubDeportivo
                         int codSocio = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine(c.reservasPorSocio(codSocio));
                         
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Console.WriteLine("8- Reservas de una Cancha");
+                        Console.WriteLine(c.listarCanchas());
+                        Console.WriteLine("Ingrese numero de cancha que va a consultar:");
+                        int codCancha = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(c.reservasPorCancha(codCancha));
+
                         break;
                 }
             } while (currentOption != 0);
