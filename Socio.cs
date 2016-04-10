@@ -27,5 +27,30 @@ namespace ClubDeportivo
             this.nombre = nombre;
             this.apellido = apellido;
         }
+
+        /*Metodo Agregar Reserva*/
+        public void agregarReserva(Cancha c, DateTime fechaReserva) {
+            int posicion = buscarPosicionReserva();
+            reservas[posicion] = new Reserva(fechaReserva, c);
+        }
+
+        public int buscarPosicionReserva() {
+            int posicion = 0;
+            while (posicion < reservas.Length && reservas[posicion] != null) {
+                posicion++;
+            }
+            return posicion;
+        }
+
+        /*Metodo que lista las reservas de un determinado Socio*/
+        public string buscarReservas() {
+            string reservasSocio = "";
+            int i = 0;
+            while (i < reservas.Length && reservas[i] != null) {
+                reservasSocio += reservas[i];
+                i++;
+            }
+            return reservasSocio;
+        }
     }
 }

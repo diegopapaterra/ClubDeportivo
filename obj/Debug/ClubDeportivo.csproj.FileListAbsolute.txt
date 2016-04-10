@@ -13,3 +13,9 @@ E:\Documentos\ORT\Analista Programador\P2\Practico\3-30-2016\TareaClubDeportivo\
 E:\Documentos\ORT\Analista Programador\P2\Practico\3-30-2016\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe
 E:\Documentos\ORT\Analista Programador\P2\Practico\3-30-2016\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.pdb
 E:\Documentos\ORT\Analista Programador\P2\Practico\3-30-2016\TareaClubDeportivo\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.csprojResolveAssemblyReference.cache
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe.config
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.exe
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.pdb
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.exe
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\bin\Debug\ClubDeportivo.pdb
+C:\Users\dpapaterra\Desktop\ClubDeportivo\ClubDeportivo\obj\Debug\ClubDeportivo.csprojResolveAssemblyReference.cache

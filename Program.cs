@@ -20,7 +20,9 @@ namespace ClubDeportivo
                 Console.WriteLine("3- Alta Cancha");
                 Console.WriteLine("4- Listar Socios");
                 Console.WriteLine("5- Listar Canchas");
-                Console.WriteLine("6- Salir");
+                Console.WriteLine("6- Alta Reserva");
+                Console.WriteLine("7- Reservas de un Socio");
+                Console.WriteLine("0- Salir");
                 
                 currentOption = Convert.ToInt32(Console.ReadLine());
                 switch (currentOption)
@@ -91,12 +93,34 @@ namespace ClubDeportivo
                         break;
                     case 5:
                         Console.Clear();
-                        Console.WriteLine("4- Listado de Canchas");
+                        Console.WriteLine("5- Listado de Canchas");
                         Console.WriteLine(c.listarCanchas());
                         Console.ReadKey();
                         break;
+                    case 6:
+                        Console.Clear();
+                        Console.WriteLine("6- Alta Reserva");
+                        Console.WriteLine(c.listarSocios());
+                        Console.WriteLine("Ingrese numero de socio que va a realizar la reserva:");
+                        int numeroSocio = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(c.listarCanchas());
+                        Console.WriteLine("Ingrese el codigo de cancha que va a reservar");
+                        int numeroCancha = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese fecha de la Reserva");
+                        DateTime fechaReserva = Convert.ToDateTime(Console.ReadLine());
+                        c.altaReserva(numeroSocio, numeroCancha, fechaReserva);
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Console.WriteLine("7- Reservas de un Socio");
+                        Console.WriteLine(c.listarSocios());
+                        Console.WriteLine("Ingrese numero de socio que va a consultar:");
+                        int codSocio = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(c.reservasPorSocio(codSocio));
+                        
+                        break;
                 }
-            } while (currentOption != 6);
+            } while (currentOption != 0);
         }
     }
 }

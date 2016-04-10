@@ -101,8 +101,8 @@ namespace ClubDeportivo
         public Socio buscarSocio(int nroSocio) {
             Socio s = null;
             int i = 0;
-            while(i < socios.Length && s == null){
-                if(socios[i] != null){
+            while (i < socios.Length && s == null) {
+                if (socios[i] != null) {
                     if (socios[i].NroSocio == nroSocio) {
                         s = socios[i];
                     }
@@ -112,6 +112,7 @@ namespace ClubDeportivo
             return s;
         }
 
+        /*Listar Socios*/
         public string listarSocios() {
             string socio = "";
             for (int i = 0; i < socios.Length; i++) {
@@ -134,6 +135,29 @@ namespace ClubDeportivo
                 }
             }
             return cancha;
+        }
+
+        /*Alta Reserva*/
+        public bool altaReserva(int numeroSocio, int numeroCancha, DateTime fechaReserva)
+        {
+            bool resultado = false;
+            Socio s = buscarSocio(numeroSocio);
+            Cancha c = buscarCancha(numeroCancha);
+            if (s!= null && c!=null)
+            {
+                s.agregarReserva(c, fechaReserva);
+                resultado = true;
+            }
+            return resultado;
+        }
+        /*Reservas por Socio*/
+        public string reservasPorSocio(int codigoSocio) {
+            string reservas ="";
+            Socio s = buscarSocio(codigoSocio);
+            if (s != null) {
+                reservas = s.buscarReservas();
+            }
+            return reservas;            
         }
     }
 }
